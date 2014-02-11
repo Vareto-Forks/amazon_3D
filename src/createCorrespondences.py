@@ -5,7 +5,6 @@ PATH_TO_DATA = '../data/'
 
 def getxy(event, x, y, flags, param):
 	if event == cv.EVENT_LBUTTONDOWN:
-		print "here"
 		global correspondences
 		if (len(correspondences[0]) > len(correspondences[1])):
 			#image 2
