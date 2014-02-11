@@ -1,4 +1,4 @@
-import opencv as cv
+import cv2
 
 def getxy(event, x, y, flags, param):
 	if event == cv2.EVENT_LBUTTONDOWN:
