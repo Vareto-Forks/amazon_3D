@@ -57,3 +57,6 @@ U, D, V = np.linalg.svd(f)
 D.itemset(2, 0.0)
 F = U*np.diag(D)*V
 print F
+
+# if __name__ == "__main__":
+#     constructW
