@@ -83,8 +83,6 @@ def drawEpipolars(F, points1, points2, img):
 		y1 = int(float(-dA*(x1)-dC)/dB)
 		y2 = int(float(-dA*(x2)-dC)/dB)
 
-		print x1, y1, x2, y2
-
 		cv.line(img, (x1, y1), (x2, y2), (255, 255, 0), 4)
 
 # open file 
@@ -102,18 +100,17 @@ normPoints1, normPoints2, T1, T2 = normalize(points1, points2)
 #create W such that Wf = 0
 W = constructW(normPoints1, normPoints2)
 # take SVD of W to get f
-U, D, V = np.linalg.svd(W)
+U, D, V = np.linalg.svd(W, full_matrices=True)
+V = np.transpose(V)
 f = V[:, 8]
 f = f.reshape(3,3)
 # SVD new f to make rank 2
 U, D, V = np.linalg.svd(f)
 D.itemset(2, 0.0)
-F = U*np.diag(D)*np.transpose(V)
+F = U*np.diag(D)*V
 # de normalize
 F = np.transpose(T2)*F*T1
-print 'img2'
 drawEpipolars(F, points1, points2, img2)
-print 'img1'
 drawEpipolars(np.transpose(F), points2, points1, img1)
 cv.imshow('IMAGE 1', img1)
 cv.imshow('IMAGE 2', img2)
