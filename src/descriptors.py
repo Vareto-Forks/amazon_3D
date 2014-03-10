@@ -7,7 +7,8 @@ PATH_TO_DATA = '../data/'
 def createDescriptors(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
 	sift = cv.SIFT()
-	kp, des = sift.detectAndCompute(img, None)
+	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+	kp, des = sift.detectAndCompute(gray, None)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
 	toWriteName = imgName + '.descriptors'
