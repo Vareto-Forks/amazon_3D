@@ -1,5 +1,7 @@
 import cv2 as cv 
 import re
+import numpy as np
+
 
 PATH_TO_DATA = '../data/'
 
@@ -35,6 +37,24 @@ print "Click correspondence for image 1"
 
 cv.waitKey(0)
 cv.destroyAllWindows()
+
+gray= cv.cvtColor(img1,cv.COLOR_BGR2GRAY)
+
+sift = cv.SIFT()
+kp = sift.detect(gray,None)
+
+img1=cv.drawKeypoints(gray,kp)
+
+cv.imwrite('sift_keypoints1.jpg',img1)
+
+gray= cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
+
+sift = cv.SIFT()
+kp = sift.detect(gray,None)
+
+img2=cv.drawKeypoints(gray,kp)
+
+cv.imwrite('sift_keypoints2.jpg',img2)
 
 print correspondences[0]
 print correspondences[1]
