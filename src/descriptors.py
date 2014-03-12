@@ -41,3 +41,23 @@ def surf(filename):
 		toWrite += '\n'	
 		fileToWrite.write(toWrite)
 	return kp, des
+
+def orb(filename):
+	img = cv.imread(PATH_TO_DATA+filename)
+	orb = cv.ORB()
+	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+	kp, des = orb.detectAndCompute(gray, None)
+	folder = re.findall('(.*)/.*\.jpg', filename)[0]
+	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
+	toWriteName = imgName + '.orb'
+	fileToWrite = open(PATH_TO_DATA + folder + "/" + toWriteName, 'w')
+	for index, d in enumerate(des):
+		kpi = kp[index]
+		kpList = [str(kpi.pt[0]), str(kpi.pt[1]), str(kpi.angle), str(kpi.size)]
+		toWrite = ", ".join(kpList) + ':'
+		for dimension in d:
+			toWrite += str(dimension) + ','
+		toWrite += '\n'	
+		fileToWrite.write(toWrite)
+	return kp, des
+
