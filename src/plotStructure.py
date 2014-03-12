@@ -1,5 +1,6 @@
 import cv2 as cv 
 import numpy as np
+import scipy.linalg
 import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -41,10 +42,7 @@ U3 = U[:,0:3]
 W3 = W[0:3]
 V3 = V[:,0:3]
 W3 = np.diag(W3)
-print W3.shape
-print V.shape, V3.shape
-print U.shape, U3.shape
-Structure = W3* np.transpose(V3)
+Structure = scipy.linalg.sqrtm(W3)* np.transpose(V3)
 plotStructure = np.transpose(Structure)
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
