@@ -12,7 +12,7 @@ def plotStructure(D):
 	W3 = W[0:3]
 	V3 = V[:,0:3]
 	W3 = np.diag(W3)
-	Structure = scipy.linalg.sqrtm(W3)* np.transpose(V3)
+	Structure = W3* np.transpose(V3)
 	plotStructure = np.transpose(Structure)
 	fig = plt.figure()
 	ax = fig.add_subplot(111, projection='3d')
