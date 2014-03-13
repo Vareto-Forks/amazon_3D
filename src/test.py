@@ -4,9 +4,14 @@ import detection
 import numpy as np
 import scipy.linalg
 import matplotlib
+
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+img1 = cv.imread('../data/dj/front.jpg')
+img2 = cv.imread('../data/dj/side.jpg')
+kp1, des1 = descriptors.surf('dj/front.jpg')
+kp2, des2 = descriptors.surf('dj/side.jpg')
 matches = detection.match(img1, des1, kp1, img2, des2, kp2)
 D = []
 x1s = []
