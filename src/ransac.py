@@ -1,5 +1,6 @@
 import random
 import numpy as np 
+import scipy.linalg
 
 NUM_ITER = 1000
 NUM_SAMPLES = 4

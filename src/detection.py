@@ -6,7 +6,7 @@ KP_THRESH = 0.7
 
 def match(img1, des1, kp1, img2, des2, kp2):
 	matches = matchKeypoints(des1, des2, KP_THRESH)
-	matches, model = ransac.ransac(matches, kp1, kp2)
+	#matches, model = ransac.ransac(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
 	height2, width2, depth2 = img2.shape
 	height = height1
