@@ -19,7 +19,7 @@ def plotStructure(D):
 	xs = []
 	ys = []
 	zs = []
-	for index in xrange(len(x1s)):
+	for index in xrange(len(plotStructure[:,1])):
 		xs.append(plotStructure[index,0])
 		ys.append(plotStructure[index,1])
 		zs.append(plotStructure[index,2])
