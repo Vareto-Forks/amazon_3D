@@ -41,7 +41,8 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt1 = (int(pt1[0]), int(pt1[1]))
 		pt2 = (int(pt2[0]) + width1, int(pt2[1]))
 		cv.line(img3, pt1, pt2, 255)
-	cv.imshow('img2', img3)
+	cv.imshow('img', img3)
+	print "... displaying matches ... "
 	return matches
 
 def matchKeypoints(des1, des2, thresh):

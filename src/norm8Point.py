@@ -86,35 +86,37 @@ def drawEpipolars(F, points1, points2, img):
 		cv.line(img, (x1, y1), (x2, y2), (255, 255, 0), 4)
 
 # open file 
-cFilename = raw_input('Give the name of the correspondece file from /data/ : ')
-cFile = open(PATH_TO_DATA + cFilename, 'r')
-points1 = []
-points2 = []
-for line in cFile:
-	x1, y1, x2, y2 = line.split()
-	points1.append([float(x1), float(y1)])
-	points2.append([float(x2), float(y2)])
-img1, img2 = getImages(cFilename, points1, points2)
-#normalize
-normPoints1, normPoints2, T1, T2 = normalize(points1, points2)
-#create W such that Wf = 0
-W = constructW(normPoints1, normPoints2)
-# take SVD of W to get f
-U, D, V = np.linalg.svd(W, full_matrices=True)
-V = np.transpose(V)
-f = V[:, 8]
-f = f.reshape(3,3)
-# SVD new f to make rank 2
-U, D, V = np.linalg.svd(f)
-D.itemset(2, 0.0)
-F = U*np.diag(D)*V
-# de normalize
-F = np.transpose(T2)*F*T1
-drawEpipolars(F, points1, points2, img2)
-drawEpipolars(np.transpose(F), points2, points1, img1)
-cv.imshow('IMAGE 1', img1)
-cv.imshow('IMAGE 2', img2)
-cv.waitKey(0)
-cv.destroyAllWindows()
+def getF(cFilename):
+	cFilename = raw_input('Give the name of the correspondece file from /data/ : ')
+	cFile = open(PATH_TO_DATA + cFilename, 'r')
+	points1 = []
+	points2 = []
+	for line in cFile:
+		x1, y1, x2, y2 = line.split()
+		points1.append([float(x1), float(y1)])
+		points2.append([float(x2), float(y2)])
+	img1, img2 = getImages(cFilename, points1, points2)
+	#normalize
+	normPoints1, normPoints2, T1, T2 = normalize(points1, points2)
+	#create W such that Wf = 0
+	W = constructW(normPoints1, normPoints2)
+	# take SVD of W to get f
+	U, D, V = np.linalg.svd(W, full_matrices=True)
+	V = np.transpose(V)
+	f = V[:, 8]
+	f = f.reshape(3,3)
+	# SVD new f to make rank 2
+	U, D, V = np.linalg.svd(f)
+	D.itemset(2, 0.0)
+	F = U*np.diag(D)*V
+	# de normalize
+	F = np.transpose(T2)*F*T1
+	drawEpipolars(F, points1, points2, img2)
+	drawEpipolars(np.transpose(F), points2, points1, img1)
+	cv.imshow('IMAGE 1', img1)
+	cv.imshow('IMAGE 2', img2)
+	cv.waitKey(0)
+	cv.destroyAllWindows()
+	return F
 
 
