@@ -7,10 +7,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-img1 = cv.imread('../data/smartwatch/rightside.jpg')
-img2 = cv.imread('../data/smartwatch/leftside.jpg')
-kp1, des1 = descriptors.surf('smartwatch/rightside.jpg')
-kp2, des2 = descriptors.surf('smartwatch/leftside.jpg')
 matches = detection.match(img1, des1, kp1, img2, des2, kp2)
 D = []
 x1s = []
