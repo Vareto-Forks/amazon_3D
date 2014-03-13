@@ -3,7 +3,7 @@ import numpy as np
 
 NUM_ITER = 1000
 NUM_SAMPLES = 4
-PIXEL_THRESH = 50
+PIXEL_THRESH = 20
 
 def ransac(matches, kp1, kp2):
 	pts1 = []
