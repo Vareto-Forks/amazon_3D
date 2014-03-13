@@ -7,10 +7,10 @@ import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-img1 = cv.imread('../data/test/image1.jpg')
-img2 = cv.imread('../data/test/image2.jpg')
-kp1, des1 = descriptors.orb('test/image1.jpg')
-kp2, des2 = descriptors.orb('test/image2.jpg')
+img1 = cv.imread('../data/smartwatch/rightside.jpg')
+img2 = cv.imread('../data/smartwatch/leftside.jpg')
+kp1, des1 = descriptors.surf('smartwatch/rightside.jpg')
+kp2, des2 = descriptors.surf('smartwatch/leftside.jpg')
 matches = detection.match(img1, des1, kp1, img2, des2, kp2)
 D = []
 x1s = []
@@ -48,7 +48,7 @@ W3 = np.diag(W3)
 Structure = scipy.linalg.sqrtm(W3)* np.transpose(V3)
 plotStructure = np.transpose(Structure)
 fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+ax = Axes3D(fig)#fig.add_subplot(111, projection='3d')
 xs = []
 ys = []
 zs = []
