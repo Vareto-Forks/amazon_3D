@@ -6,16 +6,34 @@ KP_THRESH = 0.7
 
 def match(img1, des1, kp1, img2, des2, kp2):
 	matches = matchKeypoints(des1, des2, KP_THRESH)
-	matches, model = ransac.ransac(matches, kp1, kp2)
+	matches, model = ransac.ransac2(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
 	height2, width2, depth2 = img2.shape
 	height = height1
 	width = width1 + width2
+	FLANN_INDEX_KDTREE = 0
+	index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
+	search_params = dict(checks=50)   # or pass empty dictionary
+
+	flann = cv.FlannBasedMatcher(index_params,search_params)
+
+	matches = flann.knnMatch(des1,des2,k=2)
+
+	goodMatches = []
+	# ratio test as per Lowe's paper
+	for i,(m,n) in enumerate(matches):
+	    if m.distance < 0.7*n.distance:
+	        goodMatches.append((matches[i][0].queryIdx,matches[i][0].trainIdx))
+
+	matches = goodMatches
+	matches, model = ransac.ransac(matches, kp1, kp2)
+
 	img3 = np.zeros((height,width,3), np.uint8)
 	img3[0:height, 0:width1] = img1.copy()
 	img3[0:height, width1:width] = img2.copy()
 	for match in matches:
-		ind1, ind2 = match
+		ind1 = match[0]
+		ind2 = match[1]
 		pt1 = kp1[ind1]
 		pt2 = kp2[ind2]
 		pt1 = pt1.pt
@@ -23,8 +41,7 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt1 = (int(pt1[0]), int(pt1[1]))
 		pt2 = (int(pt2[0]) + width1, int(pt2[1]))
 		cv.line(img3, pt1, pt2, 255)
-	cv.imshow('img', img3)
-	cv.waitKey(0);
+	cv.imshow('img2', img3)
 	return matches
 
 def matchKeypoints(des1, des2, thresh):

@@ -6,7 +6,7 @@ PATH_TO_DATA = '../data/'
 
 def sift(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
-	sift = cv.SIFT()
+	sift = cv.SIFT(500)
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = sift.detectAndCompute(gray, None)
 	print "sift",len(kp), len(des)
@@ -26,7 +26,7 @@ def sift(filename):
 
 def surf(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
-	surf = cv.SURF()
+	surf = cv.SURF(1)
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = surf.detectAndCompute(gray, None)
 	print "surf",len(kp), len(des)
