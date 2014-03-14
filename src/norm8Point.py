@@ -5,7 +5,7 @@ import cv2 as cv
 
 PATH_TO_DATA = '../data/'
 
-def normalize(points1, points):
+def normalize(points1, points2):
 	# take averages
 	x1_avg = float(sum(x[0] for x in points1))/(len(points1))
 	y1_avg = float(sum(x[1] for x in points1))/(len(points1))
@@ -85,8 +85,8 @@ def drawEpipolars(F, points1, points2, img):
 
 		cv.line(img, (x1, y1), (x2, y2), (255, 255, 0), 4)
 
-# open file 
-def getF(cFilename):
+def run():
+	# open file 
 	cFilename = raw_input('Give the name of the correspondece file from /data/ : ')
 	cFile = open(PATH_TO_DATA + cFilename, 'r')
 	points1 = []
@@ -117,6 +117,5 @@ def getF(cFilename):
 	cv.imshow('IMAGE 2', img2)
 	cv.waitKey(0)
 	cv.destroyAllWindows()
-	return F
 
 
