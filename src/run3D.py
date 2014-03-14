@@ -15,8 +15,8 @@ IMAGE2 = 'smartwatch/leftside.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
-kp1, des1 = descriptors.surf(IMAGE1)
-kp2, des2 = descriptors.surf(IMAGE2)
+kp1, des1 = descriptors.sift(IMAGE1)
+kp2, des2 = descriptors.sift(IMAGE2)
 matches = detection.match(img1, des1, kp1, img2, des2, kp2)
 D = makeD.makeD(matches,kp1,kp2)
 plotStructure.plotStructure(D)
