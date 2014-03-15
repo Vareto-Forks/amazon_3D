@@ -7,10 +7,6 @@ KP_THRESH = 0.7
 def match(img1, des1, kp1, img2, des2, kp2):
 	matches = matchKeypoints(des1, des2, KP_THRESH)
 
-	# img3 = cv.drawMatches(img1,kp1,img2,kp2,matches[:10], flags=2)
-
-	# plt.imshow(img3),plt.show()
-
 	matches, model = ransac.ransac(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
 	height2, width2, depth2 = img2.shape
@@ -22,7 +18,7 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	count = 0
 	for match in matches:
 		count += 1
-		ind1, ind2 = match.trainIdx, match.queryIdx
+		ind1, ind2 = match
 		pt1 = kp1[ind1]
 		pt2 = kp2[ind2]
 		pt1 = pt1.pt
@@ -36,30 +32,24 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	return matches
 
 def matchKeypoints(des1, des2, thresh):
-	bf = cv.BFMatcher(cv.NORM_HAMMING, crossCheck=True)
-
-	# Match descriptors.
-	matches = bf.match(des1,des2)
-	matches = sorted(matches, key = lambda x:x.distance)
-
-	# matches = []
-	# for i in range(len(des1)):
-	# 	best_val = float('Inf')
-	# 	best_ind = 0
-	# 	second_val = float('Inf')
-	# 	v1 = des1[i]
-	# 	for j in range(len(des2)):
-	# 		v2 = des2[j]
-	# 		d = np.linalg.norm(v1-v2)
-	# 		if d < best_val:
-	# 			last_best_val = best_val
-	# 			best_val = d
-	# 			best_ind = j
-	# 			if last_best_val < second_val:
-	# 				second_val = last_best_val
-	# 		elif d < second_val:
-	# 			second_val = d
-	# 	d_ratio = float(best_val)/second_val
-	# 	if d_ratio < thresh:
-	# 		matches.append((i, best_ind))
+	matches = []
+	for i in range(len(des1)):
+		best_val = float('Inf')
+		best_ind = 0
+		second_val = float('Inf')
+		v1 = des1[i]
+		for j in range(len(des2)):
+			v2 = des2[j]
+			d = np.linalg.norm(v1-v2)
+			if d < best_val:
+				last_best_val = best_val
+				best_val = d
+				best_ind = j
+				if last_best_val < second_val:
+					second_val = last_best_val
+			elif d < second_val:
+				second_val = d
+		d_ratio = float(best_val)/second_val
+		if d_ratio < thresh:
+			matches.append((i, best_ind))
 	return matches

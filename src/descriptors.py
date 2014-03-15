@@ -7,8 +7,9 @@ PATH_TO_DATA = '../data/'
 def sift(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
 	sift = cv.SIFT()
-	gray= cv.cvtColor(img,gray,cv.COLOR_BGR2GRAY)
+	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = sift.detectAndCompute(gray, None)
+	print "sift",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
 	toWriteName = imgName + '.sift'
@@ -28,6 +29,7 @@ def surf(filename):
 	surf = cv.SURF()
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = surf.detectAndCompute(gray, None)
+	print "surf",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
 	toWriteName = imgName + '.surf'
@@ -47,6 +49,7 @@ def orb(filename):
 	orb = cv.ORB()
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = orb.detectAndCompute(gray, None)
+	print "orb",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
 	toWriteName = imgName + '.orb'
