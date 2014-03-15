@@ -1,6 +1,11 @@
 import random
 import numpy as np 
+<<<<<<< HEAD
 #import scipy.linalg
+=======
+import scipy.linalg
+import cv2 as cv 
+>>>>>>> 8f568aec5dea9d9c2faba071cbbf780fed06b4f4
 
 NUM_ITER = 1000
 NUM_SAMPLES = 4
@@ -25,14 +30,15 @@ def ransac(matches, kp1, kp2):
 		for j in range(NUM_SAMPLES):
 			samples1[:,j] = pts1[sampleInd[j]]
 			samples2[:,j] = pts2[sampleInd[j]]
-		H = np.matrix(samples1)*np.matrix(samples2).I	
+		if i == 0:
+			print np.matrix(samples2)
+			print np.matrix(samples2).I
+		H = np.matrix(samples2)*np.matrix(samples1).I	
 		inlierTemp = []
 		for j in range(len(pts1)):
 			x = np.matrix(pts1[j]).T
 			xPrime = H*x
 			x2 = np.matrix(pts2[j]).T
-			# print xPrime
-			# print x2
 			xPrime[0] = xPrime[0][0]/xPrime[2][0]
 			xPrime[1] = xPrime[1][0]/xPrime[2][0]
 			xPrime = xPrime[0:2]
@@ -110,3 +116,32 @@ def ransac2(matches, kp1, kp2):
 			inliers = inlierTemp
 			model = H
 	return inliers, model
+
+def ransac3(matches, kp1, kp2):
+	pts1 = []
+	pts2 = []
+	for match in matches:
+		ind1, ind2 = match
+		pt1 = kp1[ind1].pt
+		pt2 = kp2[ind2].pt
+		pts1.append((pt1[0], pt1[1], 1.))
+		pts2.append((pt2[0], pt2[1], 1.))
+	X = np.array([(a, b, c) for (a,b,c) in pts1])
+	Xp = np.array([(a, b, c) for (a,b,c) in pts2])
+	src_pts = np.float32([kp1[m[0]].pt for m in matches]).reshape(-1,1,2)
+	dst_pts = np.float32([kp2[m[1]].pt for m in matches]).reshape(-1,1,2)
+	H,mask = cv.findHomography(src_pts,dst_pts,cv.RANSAC,5.0)
+
+	test = np.dot(H,X.transpose())
+
+	test[0,:] = test[0,:]/test[2,:]
+	test[1,:] = test[1,:]/test[2,:]
+	test[2,:] = test[2,:]/test[2,:]
+
+	inliers = []
+	for j in range(len(pts1)):
+		error = np.linalg.norm(test[:,j]-Xp[j,:].transpose())
+		if error < PIXEL_THRESH:
+			inliers.append(matches[j])
+	return inliers, H
+
