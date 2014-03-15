@@ -6,7 +6,7 @@ KP_THRESH = 0.7
 
 def match(img1, des1, kp1, img2, des2, kp2):
 	matches = matchKeypoints(des1, des2, KP_THRESH)
-	matches, model = ransac.ransac2(matches, kp1, kp2)
+	matches, model = ransac.ransac(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
 	height2, width2, depth2 = img2.shape
 	height = height1
@@ -27,10 +27,15 @@ def match(img1, des1, kp1, img2, des2, kp2):
 
 	matches = goodMatches
 	matches, model = ransac.ransac(matches, kp1, kp2)
-
-	img3 = np.zeros((height,width,3), np.uint8)
-	img3[0:height, 0:width1] = img1.copy()
-	img3[0:height, width1:width] = img2.copy()
+	im1 = cv.cvtColor(img1,cv.COLOR_BGR2GRAY)
+	im2 = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
+	img3 = np.zeros((max(height1,height2),width1+width2), np.uint8)
+	img3[:height1, :width1] = im1
+	img3[:height2, width1:width1+width2] = im2
+	img3 = cv.cvtColor(img3,cv.COLOR_GRAY2BGR)
+	# img3 = np.zeros((height,width,3), np.uint8)
+	# img3[0:height, 0:width1] = img1.copy()
+	# img3[0:height, width1:width] = img2.copy()
 	for match in matches:
 		ind1 = match[0]
 		ind2 = match[1]
@@ -43,7 +48,6 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		cv.line(img3, pt1, pt2, 255)
 	cv.imshow('img', img3)
 	print "... displaying matches ... "
-	cv.waitKey(0)
 	return matches
 
 def matchKeypoints(des1, des2, thresh):

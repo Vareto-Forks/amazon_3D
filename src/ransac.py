@@ -26,9 +26,6 @@ def ransac(matches, kp1, kp2):
 		for j in range(NUM_SAMPLES):
 			samples1[:,j] = pts1[sampleInd[j]]
 			samples2[:,j] = pts2[sampleInd[j]]
-		if i == 0:
-			print np.matrix(samples2)
-			print np.matrix(samples2).I
 		H = np.matrix(samples2)*np.matrix(samples1).I	
 		inlierTemp = []
 		for j in range(len(pts1)):

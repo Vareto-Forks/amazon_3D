@@ -6,9 +6,9 @@ PATH_TO_DATA = '../data/'
 
 def sift(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
-	sift = cv.SIFT(500)
+	sift = cv.SIFT()
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-	kp, des = sift.detectAndCompute(gray, None)
+	kp, des = sift.detectAndCompute(img, None)
 	print "sift",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
@@ -28,7 +28,7 @@ def surf(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
 	surf = cv.SURF(1)
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-	kp, des = surf.detectAndCompute(gray, None)
+	kp, des = surf.detectAndCompute(img, None)
 	print "surf",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
@@ -48,7 +48,7 @@ def orb(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
 	orb = cv.ORB()
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-	kp, des = orb.detectAndCompute(gray, None)
+	kp, des = orb.detectAndCompute(img, None)
 	print "orb",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
