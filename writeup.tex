@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage,enumitem,amsmath,amssymb,graphicx,dsfont,setspace, multicol, pdfpages, graphicx, caption}
+
+\begin{document}
+
+\begin{center}
+
+{\Large \textbf{Reconstructing 3D Structure from Amazon Product Images}}
+
+\begin{multicols}{3}
+Jason van der Merwe\\
+jasonvdm@stanford.edu\\
+\columnbreak
+Andrew Giel\\
+agiel@stanford.edu\\
+\columnbreak
+Bridge Eimon\\
+beimon@stanford.edu\\
+\end{multicols}
+CS 229, CS 221, Stanford University\\
+December 8, 2013\\
+\end{center}
+\noindent\rule{16.5cm}{0.4pt}\\
+{\large \textbf{Abstract}}\\
+Constructing 3D structure from two dimensional images usually requires many images, covering a variety of angles of the object you are trying to reconstruct. However, in this case, we only had a few images, usually only two.
+\begin{multicols}{2}
+{\noindent \large \textbf{Introduction}}\\
+This project, reconstructing 3D models from Amazon product images, is the first step of a larger goal to build a database of 3D objects by crawling the web.  This database can then be used to assist in many other object detection tasks, such as identifying objects in your home or from a cell phone camera.  One important component of making such a system is to build 3D object models from multiple views of web images. SFM is generally performed using a number of images carefully taken of the same object.  Can we use SFM from product images taken by different users?  Amazon often has a collection of images for each object uploaded by different users.  These views were all taken with different cameras in different lighting / backgrounds, which adds a challenge.  Can we combine these images to create 3D object models?
+\\\\
+{\large \textbf{Data}}\\
+To begin, we acquired a text file representation of every title in IMDB’s database. Then, we queried the RottenTomatoes API with these titles (limiting our search to movies from 2000 and later due to a of lack information available for earlier movies). Each data entry included a movie id, the director, title, genres, rating, runtime, release date, actors, studio and RottenTomatoes url. Our final dataset contained 3456 data points, ranging from movies which grossed \$181 to \$761 million. After plotting the data points box office gross, we noticed a nearly exponential scale (figure 1). So, we decided to split our data labels into 5 logarithmic scale buckets to linearize the data.
+
+
+
+\end{multicols}
+\end{document}
