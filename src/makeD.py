@@ -1,7 +1,11 @@
 import numpy as np 
 PATH_TO_DATA = '../data/'
 
+<<<<<<< HEAD
+def makeD(matches, kp1, kp2):
+=======
 def makeD(matches,kp1,kp2):
+>>>>>>> 8f568aec5dea9d9c2faba071cbbf780fed06b4f4
 	D = []
 	x1s = []
 	y1s = []

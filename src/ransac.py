@@ -1,7 +1,11 @@
 import random
 import numpy as np 
+<<<<<<< HEAD
+#import scipy.linalg
+=======
 import scipy.linalg
 import cv2 as cv 
+>>>>>>> 8f568aec5dea9d9c2faba071cbbf780fed06b4f4
 
 NUM_ITER = 1000
 NUM_SAMPLES = 4

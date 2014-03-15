@@ -33,12 +33,10 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	img3[:height1, :width1] = im1
 	img3[:height2, width1:width1+width2] = im2
 	img3 = cv.cvtColor(img3,cv.COLOR_GRAY2BGR)
-	# img3 = np.zeros((height,width,3), np.uint8)
-	# img3[0:height, 0:width1] = img1.copy()
-	# img3[0:height, width1:width] = img2.copy()
+	count = 0
 	for match in matches:
-		ind1 = match[0]
-		ind2 = match[1]
+		count += 1
+		ind1, ind2 = match
 		pt1 = kp1[ind1]
 		pt2 = kp2[ind2]
 		pt1 = pt1.pt
@@ -46,6 +44,7 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt1 = (int(pt1[0]), int(pt1[1]))
 		pt2 = (int(pt2[0]) + width1, int(pt2[1]))
 		cv.line(img3, pt1, pt2, 255)
+		
 	cv.imshow('img', img3)
 	print "... displaying matches ... "
 	return matches

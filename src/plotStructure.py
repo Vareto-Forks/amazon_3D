@@ -1,6 +1,6 @@
 import cv2 as cv 
 import numpy as np
-import scipy.linalg
+# import scipy.linalg
 import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
