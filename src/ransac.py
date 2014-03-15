@@ -6,7 +6,7 @@ import cv2 as cv
 
 NUM_ITER = 1000
 NUM_SAMPLES = 4
-PIXEL_THRESH = 20
+PIXEL_THRESH = 50
 
 def ransac(matches, kp1, kp2):
 	pts1 = []

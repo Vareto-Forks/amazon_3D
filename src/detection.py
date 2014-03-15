@@ -33,6 +33,9 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	img3[:height1, :width1] = im1
 	img3[:height2, width1:width1+width2] = im2
 	img3 = cv.cvtColor(img3,cv.COLOR_GRAY2BGR)
+	xScale = 0.1
+	yScale = 0.1
+	img3 = cv.resize(img3, (0,0), fx=xScale, fy=yScale) 
 	count = 0
 	for match in matches:
 		count += 1
@@ -41,8 +44,8 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt2 = kp2[ind2]
 		pt1 = pt1.pt
 		pt2 = pt2.pt
-		pt1 = (int(pt1[0]), int(pt1[1]))
-		pt2 = (int(pt2[0]) + width1, int(pt2[1]))
+		pt1 = (int(int(pt1[0])*xScale), int(int(pt1[1])*yScale))
+		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
 		cv.line(img3, pt1, pt2, 255)
 		
 	cv.imshow('img', img3)

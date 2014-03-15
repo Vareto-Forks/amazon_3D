@@ -26,7 +26,7 @@ def sift(filename):
 
 def surf(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
-	surf = cv.SURF(1)
+	surf = cv.SURF(300)
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = surf.detectAndCompute(img, None)
 	print "surf",len(kp), len(des)
