@@ -9,8 +9,10 @@ from mpl_toolkits.mplot3d import Axes3D
 import plotStructure
 import makeD
 
-IMAGE1 = 'shoe/left.jpg'
-IMAGE2 = 'shoe/angle.jpg'
+PATH_TO_DATA = '../data/'
+
+IMAGE1 = 'vball/leftside.JPG'
+IMAGE2 = 'vball/rightside.JPG'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
