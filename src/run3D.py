@@ -11,8 +11,9 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-IMAGE1 = 'smartwatch_large/leftside.jpg'
-IMAGE2 = 'smartwatch_large/rightside.jpg'
+
+IMAGE1 = 'vball/front.jpg'
+IMAGE2 = 'vball/rightside.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)

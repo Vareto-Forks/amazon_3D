@@ -54,8 +54,8 @@ def readD():
 		x2s[index] -= x2Avg
 		y2s[index] -= y2Avg
 	D.append(x1s)
-	D.append(y1s)
 	D.append(x2s)
+	D.append(y1s)
 	D.append(y2s)
 	D = np.matrix(D)
 	return D

@@ -50,7 +50,6 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		
 	print "... displaying matches ... "
 	cv.imshow('img', img3)
-	cv.waitKey(0)
 	return matches
 
 def matchKeypoints(des1, des2, thresh):
