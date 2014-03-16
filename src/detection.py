@@ -33,8 +33,8 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	img3[:height1, :width1] = im1
 	img3[:height2, width1:width1+width2] = im2
 	img3 = cv.cvtColor(img3,cv.COLOR_GRAY2BGR)
-	xScale = 0.1
-	yScale = 0.1
+	xScale = 0.4
+	yScale = 0.4
 	img3 = cv.resize(img3, (0,0), fx=xScale, fy=yScale) 
 	count = 0
 	for match in matches:
@@ -48,8 +48,9 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
 		cv.line(img3, pt1, pt2, 255)
 		
-	cv.imshow('img', img3)
 	print "... displaying matches ... "
+	cv.imshow('img', img3)
+	cv.waitKey(0)
 	return matches
 
 def matchKeypoints(des1, des2, thresh):
