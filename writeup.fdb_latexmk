@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1394930659 "writeup.tex" "writeup.pdf" "writeup" 1394930660
+["pdflatex"] 1394949299 "writeup.tex" "writeup.pdf" "writeup" 1394949300
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty" 1335995445 24460 92f559a71aac869021852c227c704b38 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
@@ -45,8 +45,8 @@
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty" 1254151720 10075 18f0ccff816231e9905cd2b3a482a622 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty" 1169481954 55224 a43bab84e0ac5e6efcaf9a98bde73a94 ""
-  "writeup.aux" 1394930660 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1394930651 5741 556fdf250dfe62887f7659a26b78aa15 ""
+  "writeup.aux" 1394949300 8 a94a2480d3289e625eea47cd1b285758 ""
+  "writeup.tex" 1394949286 6505 091670e7e4e2c25f490a71e6afab868d ""
   (generated)
   "writeup.log"
   "writeup.pdf"
