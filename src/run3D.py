@@ -12,9 +12,9 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-IMAGE1 = 'vball_small/rightside.jpg'
+IMAGE1 = 'vball_small/leftside.jpg'
 IMAGE2 = 'vball_small/front.jpg'
-IMAGE3 = 'vball_small/leftside.jpg'
+IMAGE3 = 'vball_small/rightside.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
@@ -60,30 +60,30 @@ matches = goodMatches
 pts1 = []
 pts2 = []
 
-for i in range(len(plotStructure1)):
-	pts1.append((plotStructure1[i,0],plotStructure1[i,1],plotStructure1[i,2]))
 
-for i in range(len(plotStructure2)):
-	pts2.append((plotStructure2[i,0],plotStructure2[i,1],plotStructure2[i,2]))
+for match in matches:
+	pts1.append((plotStructure1[match[0],0],plotStructure1[match[0],1],plotStructure1[match[0],2]))
+	pts2.append((plotStructure2[match[1],0],plotStructure2[match[1],1],plotStructure2[match[1],2]))
+
 
 inliers, model = ransac.ransac3D(matches,pts1,pts2)
 
-plotStructure3 = model*plotStructure1
+plotStructure3 = model*np.transpose(plotStructure1)
 
-plotStructure = np.hstack((plotStructure2,plotStructure3))
+plotStructure = np.vstack((plotStructure2,np.transpose(plotStructure3)))
 
 fig = plt.figure()
-	ax = fig.add_subplot(111, projection='3d')
-	xs = []
-	ys = []
-	zs = []
-	for index in xrange(len(plotStructure[:,1])):
-		xs.append(plotStructure[index][0])
-		ys.append(plotStructure[index][1])
-		zs.append(plotStructure[index][2])
-	ax.scatter(xs,ys,zs, color='r', marker='o')
-	ax.set_xlabel('X Label')
-	ax.set_ylabel('Y Label')
-	ax.set_zlabel('Z Label')
-	plt.show()
+ax = fig.add_subplot(111, projection='3d')
+xs = []
+ys = []
+zs = []
+for index in xrange(len(plotStructure[:,1])):
+	xs.append(plotStructure[index,0])
+	ys.append(plotStructure[index,1])
+	zs.append(plotStructure[index,2])
+ax.scatter(xs,ys,zs, color='r', marker='o')
+ax.set_xlabel('X Label')
+ax.set_ylabel('Y Label')
+ax.set_zlabel('Z Label')
+plt.show()
 

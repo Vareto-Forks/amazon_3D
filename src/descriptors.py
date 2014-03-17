@@ -13,6 +13,7 @@ def sift(filename):
 	sift = cv.SIFT()
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = sift.detectAndCompute(img, None)
+	print "sift",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
 	toWriteName = imgName + '.sift'
