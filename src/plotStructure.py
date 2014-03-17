@@ -1,6 +1,6 @@
 import cv2 as cv 
 import numpy as np
-#import scipy.linalg
+import scipy.linalg
 import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -23,9 +23,9 @@ def plotStructure(D):
 		xs.append(plotStructure[index,0])
 		ys.append(plotStructure[index,1])
 		zs.append(plotStructure[index,2])
-	ax.scatter(xs,ys,zs, c='r', marker='o')
-	ax.scatter(xs[:3],ys[:3],zs[:3], c='b', marker='o')
+	ax.scatter(xs,ys,zs, color='r', marker='o')
 	ax.set_xlabel('X Label')
 	ax.set_ylabel('Y Label')
 	ax.set_zlabel('Z Label')
 	plt.show()
+	return plotStructure

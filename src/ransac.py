@@ -20,6 +20,8 @@ def ransac(matches, kp1, kp2):
 	numInliers = 0	
 	model = None
 	for i in range(NUM_ITER):
+		if i%10 == 0:
+			print i
 		sampleInd = random.sample(range(len(matches)), NUM_SAMPLES)
 		samples1 = np.zeros((3, NUM_SAMPLES))
 		samples2 = np.zeros((3, NUM_SAMPLES))

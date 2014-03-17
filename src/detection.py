@@ -7,12 +7,10 @@ KP_THRESH = 0.7
 def match(img1, des1, kp1, img2, des2, kp2):
 	des1 = np.array(des1)
 	des2 = np.array(des2)
-	matches = matchKeypoints(des1, des2, KP_THRESH)
-	matches, model = ransac.ransac(matches, kp1, kp2)
+	# matches = matchKeypoints(des1, des2, KP_THRESH)
+	# matches, model = ransac.ransac(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
 	height2, width2, depth2 = img2.shape
-	height = height1
-	width = width1 + width2
 	FLANN_INDEX_KDTREE = 0
 	index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
 	search_params = dict(checks=50)   # or pass empty dictionary
@@ -47,17 +45,6 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt1 = (int(int(pt1[0])*xScale), int(int(pt1[1])*yScale))
 		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
 		cv.line(img3, pt1, pt2, 255)
-
-	for i in range(3):
-		match = matches[i]
-		ind1, ind2 = match
-		pt1 = kp1[ind1]
-		pt2 = kp2[ind2]
-		pt1 = pt1.pt
-		pt2 = pt2.pt
-		pt1 = (int(int(pt1[0])*xScale), int(int(pt1[1])*yScale))
-		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
-		cv.line(img3, pt1, pt2, (0,255,0))
 		
 	print "... displaying matches ... "
 	cv.imshow('img', img3)
