@@ -36,9 +36,7 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	xScale = 0.4
 	yScale = 0.4
 	img3 = cv.resize(img3, (0,0), fx=xScale, fy=yScale) 
-	count = 0
 	for match in matches:
-		count += 1
 		ind1, ind2 = match
 		pt1 = kp1[ind1]
 		pt2 = kp2[ind2]
@@ -47,6 +45,17 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt1 = (int(int(pt1[0])*xScale), int(int(pt1[1])*yScale))
 		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
 		cv.line(img3, pt1, pt2, 255)
+
+	for i in range(3):
+		match = matches[i]
+		ind1, ind2 = match
+		pt1 = kp1[ind1]
+		pt2 = kp2[ind2]
+		pt1 = pt1.pt
+		pt2 = pt2.pt
+		pt1 = (int(int(pt1[0])*xScale), int(int(pt1[1])*yScale))
+		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
+		cv.line(img3, pt1, pt2, (0,255,0))
 		
 	print "... displaying matches ... "
 	cv.imshow('img', img3)
