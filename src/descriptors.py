@@ -1,15 +1,18 @@
 import cv2 as cv
 import re
 import numpy as np
+import os.path
 
 PATH_TO_DATA = '../data/'
+
+def check_file_exists(filename):
+	return os.path.isfile(filename)
 
 def sift(filename):
 	img = cv.imread(PATH_TO_DATA+filename)
 	sift = cv.SIFT()
 	gray= cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 	kp, des = sift.detectAndCompute(img, None)
-	print "sift",len(kp), len(des)
 	folder = re.findall('(.*)/.*\.jpg', filename)[0]
 	imgName = re.findall('.*/(.*)\.jpg', filename)[0]
 	toWriteName = imgName + '.sift'

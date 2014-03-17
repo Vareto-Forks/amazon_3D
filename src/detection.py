@@ -5,6 +5,8 @@ import ransac
 KP_THRESH = 0.7
 
 def match(img1, des1, kp1, img2, des2, kp2):
+	des1 = np.array(des1)
+	des2 = np.array(des2)
 	matches = matchKeypoints(des1, des2, KP_THRESH)
 	matches, model = ransac.ransac(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
@@ -58,9 +60,9 @@ def matchKeypoints(des1, des2, thresh):
 		best_val = float('Inf')
 		best_ind = 0
 		second_val = float('Inf')
-		v1 = des1[i]
+		v1 = np.array(des1[i])
 		for j in range(len(des2)):
-			v2 = des2[j]
+			v2 = np.array(des2[j])
 			d = np.linalg.norm(v1-v2)
 			if d < best_val:
 				last_best_val = best_val

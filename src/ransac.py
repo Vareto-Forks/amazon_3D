@@ -1,7 +1,6 @@
 import random
 import numpy as np 
 #import scipy.linalg
-import scipy.linalg
 import cv2 as cv 
 
 NUM_ITER = 1000
