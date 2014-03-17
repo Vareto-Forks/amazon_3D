@@ -47,15 +47,7 @@ def ransac(matches, kp1, kp2):
 			model = H
 	return inliers, model
 
-def ransac3D(matches, kp1, kp2):
-	pts1 = []
-	pts2 = []
-	for match in matches:
-		ind1, ind2 = match
-		pt1 = kp1[ind1].pt
-		pt2 = kp2[ind2].pt
-		pts1.append((pt1[0], pt1[1], pt1[2]))
-		pts2.append((pt2[0], pt2[1], pt2[2]))
+def ransac3D(matches, pts1, pts2):
 	inliers = []
 	numInliers = 0	
 	model = None
