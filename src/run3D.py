@@ -12,7 +12,6 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-
 IMAGE1 = 'vball_small/rightside.jpg'
 IMAGE2 = 'vball_small/front.jpg'
 IMAGE3 = 'vball_small/leftside.jpg'

@@ -1,57 +1,5 @@
 # Fdb version 3
-<<<<<<< HEAD
-<<<<<<< HEAD
-["pdflatex"] 1394924800 "writeup.tex" "writeup.pdf" "writeup" 1394924801
-  "/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/atbegshi.sty" 1335995445 24460 92f559a71aac869021852c227c704b38 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty" 1303254447 7324 11d14f318d865f420e692d4e6c9c18c3 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty" 1303254447 7140 ece2cc23d9f20e1f53975ac167f42d3e ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty" 1335995445 8253 3bdedc8409aa5d290a2339be6f09af03 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty" 1335995445 5152 387d9200f396b498d5fd679ae44ed898 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty" 1335995445 14040 8de9f47fabc4ca3bd69b6d795e32751c ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty" 1335995445 18425 775b341047ce304520cc7c11ca41392e ""
-  "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty" 1335995445 19987 01cb2f3c1d21e5f05711b7fd50b17f2a ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1246382020 5548 21cc890100eeac7a6a792024ef2889eb ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1246382020 13613 9d8ad59dafa33583045d4f2c7f2a4863 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1156703163 3535 ce75ca6de8380293f2081dec8ab08a93 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty" 1156703163 5453 08b555fa01ef74ce33d74813d74c2362 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty" 1156703163 79756 c9b39210cd9d3168825ff6f880d43821 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty" 1156703163 5082 c925b14d21ef5c56597fe90e8e1686ad ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty" 1156703163 3745 bcdc4858c6f7cfeb8e957b4284216414 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls" 1254151887 20571 b8bd218bf2e18b4f5817ee643cd9c515 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty" 1254151887 5022 2ec7815b07dc68e65542e23a180bc839 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo" 1254151887 9053 a28d9b3c915d12545f3d5e7c4986be20 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty" 1331852109 64617 3e595e89cb20089970940faf5347edb4 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty" 1331852109 59928 5bdbc848cc19ace34fb8f06975f2d198 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/doublestroke/dsfont.sty" 1137110062 230 7bc61880b468bfd38aedc173be7c3486 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty" 1317339792 42666 6fa770e3485520a6a5f2ea7d259c8f8d ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/eso-pic/eso-pic.sty" 1286577940 11442 613b1f42c35ebbd862fd65943e4aa9b2 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty" 1254151804 14183 42a8fc761b806986eef292369afc2988 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty" 1156702488 7882 3bd78469d444e8d494e27cfd7ca92719 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty" 1156702488 2266 7054435e4584a41cf53b0a7ca624d0cb ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty" 1156702488 3153 c50e6bd54d2dd3933fc52bcf369bec4a ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg" 1254097189 802 7b8c8d72c24d795ed7720e4dfd29bff3 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg" 1278958963 3563 d35e897cae3b8c6848f6677b73370b54 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty" 1303254447 12029 04d7fdf76e0464c23b5aa3a727952d7c ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty" 1335995445 7075 bd0c34fbf1ae8fd1debd2a554e41b2d5 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1335995445 22417 c74ff4af6a1aa2b65d1924020edbbe11 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/pdfpages/pdfpages.sty" 1333988955 50769 5f707b0a9bc70b2bf43035da430ed1f9 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/pdfpages/pppdftex.def" 1333988955 5611 f3242e964116449d9ae8b15ea8be2322 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def" 1306616590 55368 3c8a0d99822330f2dfabc0dfb09ce897 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/preprint/fullpage.sty" 1137110595 2789 05b418f78b224ec872f5b11081138605 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/setspace/setspace.sty" 1324344192 22913 a27d7908fc6f0385466454a966a316eb ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty" 1254151720 10075 18f0ccff816231e9905cd2b3a482a622 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/xcolor/xcolor.sty" 1169481954 55224 a43bab84e0ac5e6efcaf9a98bde73a94 ""
-  "writeup.aux" 1394924801 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1394924800 3263 5087c2bb404c77ba71a28a087f571310 ""
-=======
-["pdflatex"] 1394930659 "writeup.tex" "writeup.pdf" "writeup" 1394930660
-=======
-["pdflatex"] 1394950082 "writeup.tex" "writeup.pdf" "writeup" 1394950083
->>>>>>> f49b1730d18fb7ee0205ddff679e539f9b9f0a9b
+["pdflatex"] 1395025102 "writeup.tex" "writeup.pdf" "writeup" 1395025103
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty" 1335995445 24460 92f559a71aac869021852c227c704b38 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
@@ -97,14 +45,8 @@
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty" 1254151720 10075 18f0ccff816231e9905cd2b3a482a622 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty" 1169481954 55224 a43bab84e0ac5e6efcaf9a98bde73a94 ""
-<<<<<<< HEAD
-  "writeup.aux" 1394930660 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1394930651 5741 556fdf250dfe62887f7659a26b78aa15 ""
->>>>>>> d6f79899713de1574304bcf089fa3454122ceb70
-=======
-  "writeup.aux" 1394950083 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1394950074 6630 81e8289c80af69d226dfbbee0eb435ab ""
->>>>>>> f49b1730d18fb7ee0205ddff679e539f9b9f0a9b
+  "writeup.aux" 1395025103 8 a94a2480d3289e625eea47cd1b285758 ""
+  "writeup.tex" 1395025101 7176 c5c38bd4a735b3a7c8fa683d6067e70b ""
   (generated)
   "writeup.log"
   "writeup.pdf"
