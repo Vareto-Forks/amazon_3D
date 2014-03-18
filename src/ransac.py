@@ -5,6 +5,7 @@ import cv2 as cv
 
 NUM_ITER = 1000
 NUM_SAMPLES = 4
+NUM_SAMPLES3D = 8
 PIXEL_THRESH = 50
 
 def ransac(matches, kp1, kp2):
@@ -62,10 +63,10 @@ def ransac3D(matches, p1, p2):
 	for i in range(NUM_ITER):
 		if i%100 == 0:
 			print i
-		sampleInd = random.sample(range(len(matches)), NUM_SAMPLES)
-		samples1 = np.zeros((4, NUM_SAMPLES))
-		samples2 = np.zeros((4, NUM_SAMPLES))
-		for j in range(NUM_SAMPLES):
+		sampleInd = random.sample(range(len(matches)), NUM_SAMPLES3D)
+		samples1 = np.zeros((4, NUM_SAMPLES3D))
+		samples2 = np.zeros((4, NUM_SAMPLES3D))
+		for j in range(NUM_SAMPLES3D):
 			samples1[:,j] = pts1[sampleInd[j]]
 			samples2[:,j] = pts2[sampleInd[j]]
 		H = np.matrix(samples2)*np.matrix(samples1).I	
