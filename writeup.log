@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 MAR 2014 21:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 MAR 2014 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,31 +361,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
-
- []
-
 [2]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 50.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
-
- []
+(amsmath)                 on input line 49.
 
 [3] [4] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
  5065 strings out of 493315
  75127 string characters out of 6137904
- 154837 words of memory out of 5000000
+ 155837 words of memory out of 5000000
  8441 multiletter control sequences out of 15000+600000
  9496 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,39p,1346b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,39p,1346b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
@@ -394,7 +384,7 @@ sfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb>
-Output written on writeup.pdf (4 pages, 88196 bytes).
+Output written on writeup.pdf (4 pages, 91443 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
