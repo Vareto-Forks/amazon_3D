@@ -49,14 +49,20 @@ def ransac(matches, kp1, kp2):
 			model = H
 	return inliers, model
 
-def ransac3D(matches, pts1, pts2):
+def ransac3D(matches, p1, p2):
+	pts1 = []
+	pts2 = []
+	for pt in p1:
+		pts1.append((pt[0],pt[1],pt[2],1.))
+	for pt in p2:
+		pts2.append((pt[0],pt[1],pt[2],1.))
 	inliers = []
 	numInliers = 0	
 	model = None
 	for i in range(NUM_ITER):
 		sampleInd = random.sample(range(len(matches)), NUM_SAMPLES)
-		samples1 = np.zeros((3, NUM_SAMPLES))
-		samples2 = np.zeros((3, NUM_SAMPLES))
+		samples1 = np.zeros((4, NUM_SAMPLES))
+		samples2 = np.zeros((4, NUM_SAMPLES))
 		for j in range(NUM_SAMPLES):
 			samples1[:,j] = pts1[sampleInd[j]]
 			samples2[:,j] = pts2[sampleInd[j]]
@@ -66,6 +72,12 @@ def ransac3D(matches, pts1, pts2):
 			x = np.matrix(pts1[j]).T
 			xPrime = H*x
 			x2 = np.matrix(pts2[j]).T
+			xPrime[0] = xPrime[0][0]/xPrime[3][0]
+			xPrime[1] = xPrime[1][0]/xPrime[3][0]
+			xPrime[2] = xPrime[2][0]/xPrime[3][0]
+			x2[0] = x2[0][0]/x2[3][0]
+			x2[1] = x2[1][0]/x2[3][0]
+			x2[2] = x2[2][0]/x2[3][0]
 			diff = np.linalg.norm(x2-xPrime)
 			if diff < PIXEL_THRESH:
 				inlierTemp.append(matches[j])

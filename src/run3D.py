@@ -12,9 +12,9 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-IMAGE1 = 'vball_small/leftside.jpg'
-IMAGE2 = 'vball_small/front.jpg'
-IMAGE3 = 'vball_small/rightside.jpg'
+IMAGE1 = 'smartwatch/leftside.jpg'
+IMAGE2 = 'smartwatch/front.jpg'
+IMAGE3 = 'smartwatch/rightside.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
@@ -68,20 +68,38 @@ for match in matches:
 
 inliers, model = ransac.ransac3D(matches,pts1,pts2)
 
-plotStructure3 = model*np.transpose(plotStructure1)
+homogenizedStruct = []
 
-plotStructure = np.vstack((plotStructure2,np.transpose(plotStructure3)))
+for index in xrange(len(plotStructure1[:,0])):
+	homogenizedPoint = (plotStructure1[index,0],plotStructure1[index,1],plotStructure1[index,2],1.)
+	homogenizedStruct.append(homogenizedPoint)
+
+homogenizedTranspose = model*np.transpose(homogenizedStruct)
+
+plotStructure3 = []
+
+for index in xrange(len(homogenizedTranspose[0,:])):
+	xCoord = homogenizedTranspose[0,index]
+	yCoord = homogenizedTranspose[1,index]
+	zCoord = homogenizedTranspose[2,index]
+	homogenizedCoord = homogenizedTranspose[3,index]
+	xCoord = xCoord/homogenizedCoord
+	yCoord = yCoord/homogenizedCoord
+	zCoord = zCoord/homogenizedCoord
+	plotStructure3.append((xCoord,yCoord,zCoord))
+
+plotStructure = np.vstack((plotStructure2,plotStructure3))
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 xs = []
 ys = []
 zs = []
-for index in xrange(len(plotStructure[:,1])):
+for index in xrange(len(plotStructure[:,0])):
 	xs.append(plotStructure[index,0])
 	ys.append(plotStructure[index,1])
 	zs.append(plotStructure[index,2])
-ax.scatter(xs,ys,zs, color='r', marker='o')
+ax.scatter(xs,ys,zs, c='r', marker='o')
 ax.set_xlabel('X Label')
 ax.set_ylabel('Y Label')
 ax.set_zlabel('Z Label')
