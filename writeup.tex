@@ -39,7 +39,14 @@ Our experiments take the concepts presented by the Snavely Photo Tourism paper a
 
 {\large \textbf{3.1 Technical Summary}}\\
 We implemented our system incrementally, starting first by testing our reconstruction on manually annotated correspondences with images we took ourselves in a controlled environment. Our SfM is computed using the Tomasi-Kanade factorization algorithm. This allowed us to have a full measurement matrix for our Tomasi-Kanade. Once this was verified to work on with manually annotated images of our own we implemented automatic correspondence using SIFT, SURF, and ORB descriptors, matching using Euclidean distance and verifying by comparison to the second closest match. In order to refine our correspondence matches we used RANSAC, experimenting with different thresholds. In the case where we have multiple point clouds (SfMs) corresponding to structures inferred from a pair of two images, we combined these point clouds using a similar procedure. Given a set of points in three dimensions and their corresponding desciptors (SIFT, SURF, ORB), we determined the best match between these clouds via RANSAC. Using RANSAC on the three dimensional points, we generate a three dimensonal homography. This homography can be used to translate the points in one point cloud to the points in another point cloud, merging the structures captured. Once we tuned our system to work on our own images, we tested on Amazon images. \\
-\indent Our method can be broken down into 4 discrete steps: description, detection, inference of structure, and merging of structures. 
+\indent Our method can be broken down into 4 discrete steps: description, detection, inference of structure, and merging of structures. \\
+
+{\large \textbf{3.2 Description}}\\
+{\large \textbf{3.3 Detection}}\\
+{\large \textbf{3.4 Structure}}\\
+{\large \textbf{3.5 Merging Structures}}\\
+
+
 
 \end{multicols}
 \end{document}

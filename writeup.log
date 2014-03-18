@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 MAR 2014 19:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 MAR 2014 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -357,7 +357,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
-[2] [3] (./writeup.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+
+ []
+
+[3] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
  5065 strings out of 493315
  75127 string characters out of 6137904
@@ -366,11 +376,11 @@ Here is how much of TeX's memory you used:
  9496 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,6n,39p,1346b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb>
-Output written on writeup.pdf (3 pages, 48729 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb>
+Output written on writeup.pdf (3 pages, 49594 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream
