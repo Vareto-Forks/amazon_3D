@@ -12,9 +12,9 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-IMAGE1 = 'smartwatch/leftside.jpg'
-IMAGE2 = 'smartwatch/front.jpg'
-IMAGE3 = 'smartwatch/rightside.jpg'
+IMAGE1 = 'vball_small/leftside.jpg'
+IMAGE2 = 'vball_small/front.jpg'
+IMAGE3 = 'vball_small/rightside.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
@@ -24,7 +24,6 @@ kp2, des2 = descriptors.surf(IMAGE2)
 kp3, des3 = descriptors.surf(IMAGE3)
 matches1 = detection.match(img1, des1, kp1, img2, des2, kp2)
 matches2 = detection.match(img2, des2, kp2, img3, des3, kp3)
-# plotStructure.plotStructure(D)
 D1 = makeD.makeD(matches1,kp1,kp2)
 D2 = makeD.makeD(matches2,kp2,kp3)
 plotStructure1 = plotStructure.plotStructure(D1)
