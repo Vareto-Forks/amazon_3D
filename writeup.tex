@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{fullpage,enumitem,amsmath,amssymb,graphicx,dsfont,setspace, multicol, pdfpages, graphicx, caption}
+\usepackage{fullpage,enumitem,amsmath,amssymb,graphicx,dsfont,setspace, multicol, pdfpages, graphicx, caption, hyperref}
 
 \begin{document}
 
@@ -114,7 +114,12 @@ The other main issue with the Amazon images we collected was the large angles be
 We can see that not only do we have a lack of keypoints in the two images, but there is no overlap in the points that are matched. Because of this, we could not even use RANSAC to merge the two images together. With the Amazon images having such a large angle between them, we lose the redundancy necessary to compute structure. Though Amazon aims to reduce redundancy in order to minimize the number of images to succesfully advertise, we need that redundancy to construct our 3D model.\\
 {\large \textbf{5.1 Conclusion}}\\
 {\large \textbf{5.1 Future Research}}\\
+This experiment has many possible routes for future research. One exciting avenue involves the use of Sparse Bundle Adjustment on Amazon images, which was not implemented in this research. Another possible extension would be to merge multiple types of descriptors together in order to maximize the number of possible correspondences across any set of images. One exciting and potentially commerically viable extension of this research would be to implement image morphing to visualize the transition between the Amazon product images. \\
 {\large \textbf{6. References}}\\
+1. Brown, M and Lowe, D. "Unsupervised 3D Object Recognition and Reconstruction in Unordered Datasets". \url{http://www.cs.ubc.ca/~lowe/papers/brown05.pdf}\\
+2. Lowe, D. "Distinctive Image Features from Scale-Invariant Keypoints". \url{http://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf} \\
+3. Seitz, Steven, Snavely, Noah, and Szeliski, Richard. "Photo Tourism: Exploring Photo Collections in 3D". \url{http://phototour.cs.washington.edu/Photo_Tourism.pdf} \\
+4. Tomasi, Carlo, and Takeo Kanade. "Shape and Motion from Image Streams under Orthography: a Factorization Method ." International Journal of Computer Vision 9 (1992): 137-154. \url{http://www.eecs.berkeley.edu/~yang/courses/cs294-6/papers/TomasiC_Shape\%20and\%20motion\%20from\%20image\%20streams\%20under\%20orthography.pdf}. \\
 
 \end{multicols}
 \end{document}
