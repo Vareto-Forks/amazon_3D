@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1395208930 "writeup.tex" "writeup.pdf" "writeup" 1395208931
+["pdflatex"] 1395209277 "writeup.tex" "writeup.pdf" "writeup" 1395209279
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -94,9 +94,9 @@
   "images/phototourism.png" 1395203722 513285 9e07a72b15fff70accadd1c8a0a69384 ""
   "images/watch_symmetry.png" 1395199794 277089 681fa031572cb358dd55ba0a5b7b2303 ""
   "images/watch_symmetry_before_ransac.png" 1395200728 272741 5303b174953bd2d3d57257b0aba70764 ""
-  "writeup.aux" 1395208931 576 535f218c00a29ef8eec1862a968a18ff ""
-  "writeup.out" 1395208930 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "writeup.tex" 1395208920 22179 b436f47305242d795a6de2848cd98895 ""
+  "writeup.aux" 1395209279 576 535f218c00a29ef8eec1862a968a18ff ""
+  "writeup.out" 1395209278 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "writeup.tex" 1395209275 22273 31028091740e81bbe5859d2a381a7297 ""
   (generated)
   "writeup.log"
   "writeup.out"
