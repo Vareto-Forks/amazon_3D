@@ -51,9 +51,9 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		
 	print "... displaying matches ... "
 	cv.imshow('img' + imgId, img3)
-	plt.imshow(img3, cmap = 'gray', interpolation = 'bicubic')
-	plt.xticks([]), plt.yticks([])
-	plt.show()
+	# plt.imshow(img3, cmap = 'gray', interpolation = 'bicubic')
+	# plt.xticks([]), plt.yticks([])
+	# plt.show()
 	return matches
 
 def matchKeypoints(des1, des2, thresh):
