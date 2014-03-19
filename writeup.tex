@@ -101,8 +101,10 @@ One of the largest problems we faced on the Amazon product images was the remark
 \includegraphics[width=0.5\textwidth]{images/watch_symmetry.png} 
 There are clear problems with symmetry in both cases. RANSAC removes many of the matches that are incorrect due to symmetry, however, a few incorrect matches slip through RANSAC. There were so few matches after RANSAC that it was impossible to plot the structure of the watch with any degree of accuracy. Unfortunately, this problem occurs with many products.\\\\
 {\large \textbf{4.5 Angular Disparity}}\\
-
-
+The other main issue with the Amazon images we collected was the large angles between images. Our process worked well on the volleyball when we had very small angles with lots of overlap in the keypoints of two images. In the Amazon images, they often attempt to advertise selling points of the object using a minimal amount of images. For example, we took an image of a shoe from Amazon, where the closest images were $45^o$ apart.\\
+\includegraphics[width=0.5\textwidth]{images/ShoeFrontAngle.png} 
+\includegraphics[width=0.5\textwidth]{images/ShoeAngleLeft.png} 
+We can see that not only do we have a lack of keypoints in the two images, but there is no overlap in the points that are matched. Because of this, we could not even use RANSAC to merge the two images together. With the Amazon images having such a large angle between them, we lose the redundancy necessary to compute structure. Though Amazon aims to reduce redundancy in order to minimize the number of images to succesfully advertise, we need that redundancy to construct our 3D model.
 
 \end{multicols}
 \end{document}
