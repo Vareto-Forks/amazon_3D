@@ -74,8 +74,13 @@ This means that every point $\hat{x}_{ij} = A_{i}\hat{X}_{j}$, which means that 
 \\\\
 {\large \textbf{3.5 Merging Structures}}\\
 Once we computed our multiple point clouds using SfM, the last step was to aggregate all the points into one output space. In order to do this, we used a modified version of RANSAC applied to the points in 3D space in our point clouds. To merge two point clouds together, we used the SURF descriptors of the image common to both point clouds to find the matches between points in the point clouds. The next step is to use RANSAC to find a 4x4 homography which maps points from the first point cloud to the second with the largest number of inliers. $H$ is a homogenized 4x4 matrix, so we homogenized the first point cloud, the calculated the points from the first cloud into the output space of the second point cloud by $P_2$ = $H\times homogenizedP_1$. Once we then dehomogenized these points, we added them into the output space of the second point cloud, resulting in an image containing an aggregation of both point clouds. We then take two of these combined set of point clouds and combine them as well until we have a single point cloud containing all our keypoints.\\\\
-{\large \textbf{4. Experiments}}\\
-We tested our implementation on many different sets of images. This includes images we took ourself, images taken from Amazon, different objects, different resolutions, and image sets with different degrees of rotation between individual images. 
+{\large \textbf{4.1 Experiments Summary}}\\
+We tested our implementation on many different sets of images. This includes images we took ourself, images taken from Amazon, different objects, different resolutions, and image sets with different degrees of rotation between individual images. \\\\
+{\large \textbf{4.2 Manual vs Automatic Keypoint Detection}}\\
+{\large \textbf{4.3 Different Image Resolutions}}\\
+{\large \textbf{4.4 Symmetry in Objects}}\\
+{\large \textbf{4.5 Angular Disparity}}\\
+
 
 
 \end{multicols}
