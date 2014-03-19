@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1395207970 "writeup.tex" "writeup.pdf" "writeup" 1395207972
+["pdflatex"] 1395208272 "writeup.tex" "writeup.pdf" "writeup" 1395208274
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty" 1335995445 24460 92f559a71aac869021852c227c704b38 ""
@@ -62,9 +62,9 @@
   "images/phototourism.png" 1395202470 513285 9e07a72b15fff70accadd1c8a0a69384 ""
   "images/watch_symmetry.png" 1395200950 277089 681fa031572cb358dd55ba0a5b7b2303 ""
   "images/watch_symmetry_before_ransac.png" 1395200950 272741 5303b174953bd2d3d57257b0aba70764 ""
-  "writeup.aux" 1395207971 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "writeup.out" 1395207971 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "writeup.tex" 1395207969 22030 3c73b1d316ddc214f1e372253e640c6c ""
+  "writeup.aux" 1395208273 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "writeup.out" 1395208273 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "writeup.tex" 1395208257 21914 c10f3aa907c929c9759783c69747b9c7 ""
   (generated)
   "writeup.log"
   "writeup.out"
