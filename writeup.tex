@@ -43,7 +43,7 @@ In order to obtain keypoints and descriptors from images, we tried SIFT, SURF an
 {\large \textbf{3.3 Matching}}\\
 To match points, we calculated initial matching of our keypoint descriptions using the Fast Library for Approximate Nearest Neighbors (FLANN). We chose this algorithm because it uses a k-d tree structure which reduces the nearest neighbors calculation to run in $O(logN)$ time, a drastic speed improvement. We only keep keypoint pairs where the ratio of the nearest neighbor and the second nearest neighbor is less than 0.7 as presented in Lowe's paper. This enables us to remove matches where we are not confident in our match. Once we have this set of matches, we performed Random Sample Consensus (RANSAC) to remove any outlier point pairs that do not fit a homography projecting keypoints from the first image into the second. The way we do this is to:\\\\
 1) Select 4 random keypoints from the first image. We pick four keypoints, because this is the minimum number of points needed to calculate a homography between 2D images\\\\
-2) We compute a homography $H$ which maps our 4 random keypoints form image 1 into image 2. We calculated this homography $H = X'*X^{-1}$ where\\
+2) We compute a homography $H$ which maps our 4 random keypoints form image 1 into image 2. We calculated this homography $H = X'X^{-1}$ where\\
 $$X' = \left[\begin{array}{cccc}
  Kp_{2,1,x} & Kp_{2,2,x} & Kp_{2,3,x} & Kp_{2,4,x}\\ 
  Kp_{2,1,y} & Kp_{2,2,y} & Kp_{2,3,y} & Kp_{2,4,y}\\
