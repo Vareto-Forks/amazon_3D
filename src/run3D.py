@@ -12,16 +12,16 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-IMAGE1 = 'vball_tiny/leftside.jpg'
-IMAGE2 = 'vball_tiny/front.jpg'
-IMAGE3 = 'vball_tiny/rightside.jpg'
+IMAGE1 = 'vball/leftside.jpg'
+IMAGE2 = 'vball/front.jpg'
+IMAGE3 = 'vball/rightside.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
 img3 = cv.imread(PATH_TO_DATA + IMAGE3)
-kp1, des1 = descriptors.sift(IMAGE1)
-kp2, des2 = descriptors.sift(IMAGE2)
-kp3, des3 = descriptors.sift(IMAGE3)
+kp1, des1 = descriptors.surf(IMAGE1)
+kp2, des2 = descriptors.surf(IMAGE2)
+kp3, des3 = descriptors.surf(IMAGE3)
 matches1 = detection.match(img1, des1, kp1, img2, des2, kp2)
 matches2 = detection.match(img2, des2, kp2, img3, des3, kp3)
 D1 = makeD.makeD(matches1,kp1,kp2)
