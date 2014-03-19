@@ -89,12 +89,17 @@ ORB & 500 & 19 \\
 \end{tabular}
 \\\\
 \indent Also seen here are the recovered structures from each of the descriptor methods used. Note there is no structure retrieved using ORB, as it did not output a sufficient number of correspondences. \\\\
-\includegraphics[width=0.5\textwidth]{images/VBallMediumSurf_SideBySide.png}
-A volleyball reconstructed using SURF shown from two angles.\\
 \includegraphics[width=0.5\textwidth]{images/VBallMediumSift_SideBySide.png}
 A volleyball reconstructed using SIFT shown from two angles. \\
+\includegraphics[width=0.5\textwidth]{images/VBallMediumSurf_SideBySide.png}
+A volleyball reconstructed using SURF shown from two angles.\\\\
+It is clear that SURF is clearly more robust and produces far better results.\\\\
 {\large \textbf{4.3 Different Image Resolutions}}\\
 {\large \textbf{4.4 Symmetry in Objects}}\\
+One of the largest problems we faced on the Amazon product images was the remarkable amount of symmetry in these images intended for advertisement. Often these images depicted symmetric objects with glares and reflections that were mirrored between the two images. This exposed a fundamental flaw or weakness in our matching process, as opposite sides of a symmetric object which appear identical would be matched. This led to enormous reconstruction error that resulted in nonsense structural point clouds. Our best example of this occurs in a pair of images of a smartwatch, where the left side of the watch in one image mirrors the right side of the paired image. The two below images are of the matches generated before and after RANSAC, with yellow indicating areas where this problem of symmetry occur.\\
+\includegraphics[width=0.5\textwidth]{images/watch_symmetry_before_ransac.png}
+\includegraphics[width=0.5\textwidth]{images/watch_symmetry.png} 
+There are clear problems with symmetry in both cases. RANSAC removes many of the matches that are incorrect due to symmetry, however, a few incorrect matches slip through RANSAC. There were so few matches after RANSAC that it was impossible to plot the structure of the watch with any degree of accuracy. Unfortunately, this problem occurs with many products.\\\\
 {\large \textbf{4.5 Angular Disparity}}\\
 
 

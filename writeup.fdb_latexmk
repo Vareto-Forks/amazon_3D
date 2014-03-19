@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1395201438 "writeup.tex" "writeup.pdf" "writeup" 1395201441
+["pdflatex"] 1395202044 "writeup.tex" "writeup.pdf" "writeup" 1395202045
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -79,8 +79,10 @@
   "images/SVD_of_D.png" 1395195246 36063 5670a2c42140b06c9b10099146b91faa ""
   "images/VBallMediumSift_SideBySide.png" 1395201135 71844 eae988a13c4e60d9c22c068028a9013b ""
   "images/VBallMediumSurf_SideBySide.png" 1395201306 110212 f06e578bf2e42de26f4f71e5eae73563 ""
-  "writeup.aux" 1395201441 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1395201432 15819 642e1921ce43da8236ca0f73c4f23d65 ""
+  "images/watch_symmetry.png" 1395199794 277089 681fa031572cb358dd55ba0a5b7b2303 ""
+  "images/watch_symmetry_before_ransac.png" 1395200728 272741 5303b174953bd2d3d57257b0aba70764 ""
+  "writeup.aux" 1395202045 8 a94a2480d3289e625eea47cd1b285758 ""
+  "writeup.tex" 1395202028 17223 6ead856450b0dc6cbfc5b530bf14481d ""
   (generated)
   "writeup.log"
   "writeup.pdf"
