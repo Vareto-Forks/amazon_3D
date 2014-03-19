@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1395203587 "writeup.tex" "writeup.pdf" "writeup" 1395203691
+["pdflatex"] 1395203810 "writeup.tex" "writeup.pdf" "writeup" 1395203811
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty" 1335995445 24460 92f559a71aac869021852c227c704b38 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
@@ -48,11 +48,12 @@
   "images/SVD_of_D.png" 1395116458 36063 5670a2c42140b06c9b10099146b91faa ""
   "images/VBallMediumSift_SideBySide.png" 1395202081 71844 eae988a13c4e60d9c22c068028a9013b ""
   "images/VBallMediumSurf_SideBySide.png" 1395202081 110212 f06e578bf2e42de26f4f71e5eae73563 ""
+  "images/VBallSmallSurf_SideBySide.png" 1395203798 73467 cd6cef3d9a61379d256b14a455619f50 ""
   "images/phototourism.png" 1395202470 513285 9e07a72b15fff70accadd1c8a0a69384 ""
   "images/watch_symmetry.png" 1395200950 277089 681fa031572cb358dd55ba0a5b7b2303 ""
   "images/watch_symmetry_before_ransac.png" 1395200950 272741 5303b174953bd2d3d57257b0aba70764 ""
-  "writeup.aux" 1395203588 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1395203586 18321 36637c870ef8a891b40e76fd0cc92b09 ""
+  "writeup.aux" 1395203811 8 a94a2480d3289e625eea47cd1b285758 ""
+  "writeup.tex" 1395203809 18320 abb7785d9ec409214a171085f028969e ""
   (generated)
   "writeup.log"
   "writeup.pdf"

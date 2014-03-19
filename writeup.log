@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAR 2014 21:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAR 2014 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,14 +461,16 @@ File: images/VBallMediumSurf_SideBySide.png Graphic file (type png)
 Package pdftex.def Info: images/VBallMediumSurf_SideBySide.png used on input li
 ne 100.
 (pdftex.def)             Requested size: 234.8775pt x 104.10648pt.
-File: images/VBallMediumSurf_SideBySide.png Graphic file (type png)
 
-<use images/VBallMediumSurf_SideBySide.png>
-Package pdftex.def Info: images/VBallMediumSurf_SideBySide.png used on input li
-ne 102.
-(pdftex.def)             Requested size: 234.8775pt x 104.10648pt.
+<images/VBallSmallSurf_SideBySide.png, id=20, 490.7133pt x 241.3818pt>
+File: images/VBallSmallSurf_SideBySide.png Graphic file (type png)
 
-<images/watch_symmetry_before_ransac.png, id=20, 960.58875pt x 489.83pt>
+<use images/VBallSmallSurf_SideBySide.png>
+Package pdftex.def Info: images/VBallSmallSurf_SideBySide.png used on input lin
+e 102.
+(pdftex.def)             Requested size: 234.8775pt x 115.53783pt.
+
+<images/watch_symmetry_before_ransac.png, id=21, 960.58875pt x 489.83pt>
 File: images/watch_symmetry_before_ransac.png Graphic file (type png)
 
 <use images/watch_symmetry_before_ransac.png>
@@ -476,7 +478,7 @@ Package pdftex.def Info: images/watch_symmetry_before_ransac.png used on input
 line 107.
 (pdftex.def)             Requested size: 234.8775pt x 119.76648pt.
 
-<images/watch_symmetry.png, id=21, 961.5925pt x 457.71pt>
+<images/watch_symmetry.png, id=22, 961.5925pt x 457.71pt>
 File: images/watch_symmetry.png Graphic file (type png)
 
 <use images/watch_symmetry.png>
@@ -583,29 +585,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--111
  []
 
 [4] [5 <./images/SVD_of_D.png> <./images/VBallMediumSift_SideBySide.png>]
-[6 <./images/VBallMediumSurf_SideBySide.png> <./images/watch_symmetry_before_ra
-nsac.png> <./images/watch_symmetry.png>] [7] (./writeup.aux) ) 
+[6 <./images/VBallMediumSurf_SideBySide.png> <./images/VBallSmallSurf_SideBySid
+e.png> <./images/watch_symmetry_before_ransac.png>] [7 <./images/watch_symmetry
+.png>] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 5097 strings out of 493315
- 76110 string characters out of 6137904
+ 5102 strings out of 493315
+ 76302 string characters out of 6137904
  165837 words of memory out of 5000000
- 8465 multiletter control sequences out of 15000+600000
+ 8469 multiletter control sequences out of 15000+600000
  9496 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,7n,39p,1346b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on writeup.pdf (7 pages, 1384080 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb>
+Output written on writeup.pdf (7 pages, 1442283 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
