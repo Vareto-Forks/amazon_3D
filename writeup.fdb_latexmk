@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1395200132 "writeup.tex" "writeup.pdf" "writeup" 1395200140
+["pdflatex"] 1395202044 "writeup.tex" "writeup.pdf" "writeup" 1395202045
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -77,12 +77,12 @@
   "/usr/local/texlive/2012/texmf.cnf" 1341108668 572 7ea7194897937febeb63145e1c3a1f03 ""
   "/usr/local/texlive/2012/texmf/web2c/texmf.cnf" 1336865692 31299 729e216d9b945005c0d4b079c0500bc9 ""
   "images/SVD_of_D.png" 1395195246 36063 5670a2c42140b06c9b10099146b91faa ""
-  "images/VBallMediumSift1.png" 1395199889 37388 811b0e264a6af1338cde9a442c7edcb1 ""
-  "images/VBallMediumSift2.png" 1395199889 42447 73d84e665c1c50011c8ce5b189af44cc ""
-  "images/VBallMediumSurf1.png" 1395199889 48950 a6bf12aba87c34cc8c0dbe875ac58dea ""
-  "images/VBallMediumSurf2.png" 1395199889 70938 26615e6b32c5815e65c509ba18d1488b ""
-  "writeup.aux" 1395200139 8 a94a2480d3289e625eea47cd1b285758 ""
-  "writeup.tex" 1395200127 15933 e2927d92546b9cfc8905caa38ae5a201 ""
+  "images/VBallMediumSift_SideBySide.png" 1395201135 71844 eae988a13c4e60d9c22c068028a9013b ""
+  "images/VBallMediumSurf_SideBySide.png" 1395201306 110212 f06e578bf2e42de26f4f71e5eae73563 ""
+  "images/watch_symmetry.png" 1395199794 277089 681fa031572cb358dd55ba0a5b7b2303 ""
+  "images/watch_symmetry_before_ransac.png" 1395200728 272741 5303b174953bd2d3d57257b0aba70764 ""
+  "writeup.aux" 1395202045 8 a94a2480d3289e625eea47cd1b285758 ""
+  "writeup.tex" 1395202028 17223 6ead856450b0dc6cbfc5b530bf14481d ""
   (generated)
   "writeup.log"
   "writeup.pdf"
