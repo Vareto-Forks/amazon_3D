@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAR 2014 21:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 MAR 2014 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,125 +455,157 @@ File: images/VBallMediumSurf_SideBySide.png Graphic file (type png)
 Package pdftex.def Info: images/VBallMediumSurf_SideBySide.png used on input li
 ne 95.
 (pdftex.def)             Requested size: 234.8775pt x 104.10648pt.
+File: images/VBallMediumSurf_SideBySide.png Graphic file (type png)
+
+<use images/VBallMediumSurf_SideBySide.png>
+Package pdftex.def Info: images/VBallMediumSurf_SideBySide.png used on input li
+ne 100.
+(pdftex.def)             Requested size: 234.8775pt x 104.10648pt.
+File: images/VBallMediumSurf_SideBySide.png Graphic file (type png)
+
+<use images/VBallMediumSurf_SideBySide.png>
+Package pdftex.def Info: images/VBallMediumSurf_SideBySide.png used on input li
+ne 102.
+(pdftex.def)             Requested size: 234.8775pt x 104.10648pt.
 
 <images/watch_symmetry_before_ransac.png, id=20, 960.58875pt x 489.83pt>
 File: images/watch_symmetry_before_ransac.png Graphic file (type png)
 
 <use images/watch_symmetry_before_ransac.png>
 Package pdftex.def Info: images/watch_symmetry_before_ransac.png used on input 
-line 101.
+line 107.
 (pdftex.def)             Requested size: 234.8775pt x 119.76648pt.
 
 <images/watch_symmetry.png, id=21, 961.5925pt x 457.71pt>
 File: images/watch_symmetry.png Graphic file (type png)
 
 <use images/watch_symmetry.png>
-Package pdftex.def Info: images/watch_symmetry.png used on input line 102.
+Package pdftex.def Info: images/watch_symmetry.png used on input line 108.
 (pdftex.def)             Requested size: 234.8775pt x 111.79422pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 70--105
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 70--105
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
 []
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 70--105
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
 []
  []
 
 
-Underfull \hbox (badness 5091) in paragraph at lines 70--105
+Underfull \hbox (badness 5091) in paragraph at lines 70--111
 \OT1/cmr/m/n/12 A vol-ley-ball re-con-structed us-ing SURF
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 70--105
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
 []
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
+\OT1/cmr/m/n/12 Struc-ture in-fered from large im-ages
+ []
+
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
+\OT1/cmr/m/n/12 Struc-ture in-fered from smaller im-ages
+ []
+
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
+[]
+ []
+
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 70--111
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--105
+Underfull \hbox (badness 10000) in paragraph at lines 70--111
 
  []
 
 [4] [5 <./images/SVD_of_D.png> <./images/VBallMediumSift_SideBySide.png>]
 [6 <./images/VBallMediumSurf_SideBySide.png> <./images/watch_symmetry_before_ra
-nsac.png> <./images/watch_symmetry.png>] (./writeup.aux) ) 
+nsac.png> <./images/watch_symmetry.png>] [7] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
  5097 strings out of 493315
  76110 string characters out of 6137904
- 163837 words of memory out of 5000000
+ 165837 words of memory out of 5000000
  8465 multiletter control sequences out of 15000+600000
  9496 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,7n,39p,1346b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on writeup.pdf (6 pages, 1382977 bytes).
+</usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on writeup.pdf (7 pages, 1384080 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
