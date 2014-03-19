@@ -7,8 +7,6 @@ KP_THRESH = 0.7
 def match(img1, des1, kp1, img2, des2, kp2):
 	des1 = np.array(des1)
 	des2 = np.array(des2)
-	# matches = matchKeypoints(des1, des2, KP_THRESH)
-	# matches, model = ransac.ransac(matches, kp1, kp2)
 	height1, width1, depth1 = img1.shape
 	height2, width2, depth2 = img2.shape
 	FLANN_INDEX_KDTREE = 0
@@ -27,6 +25,7 @@ def match(img1, des1, kp1, img2, des2, kp2):
 
 	matches = goodMatches
 	matches, model = ransac.ransac(matches, kp1, kp2)
+	print len(matches)
 	im1 = cv.cvtColor(img1,cv.COLOR_BGR2GRAY)
 	im2 = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
 	img3 = np.zeros((max(height1,height2),width1+width2), np.uint8)

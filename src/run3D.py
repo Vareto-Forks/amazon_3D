@@ -19,9 +19,9 @@ IMAGE3 = 'vball_small/rightside.jpg'
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
 img3 = cv.imread(PATH_TO_DATA + IMAGE3)
-kp1, des1 = descriptors.surf(IMAGE1)
-kp2, des2 = descriptors.surf(IMAGE2)
-kp3, des3 = descriptors.surf(IMAGE3)
+kp1, des1 = descriptors.orb(IMAGE1)
+kp2, des2 = descriptors.orb(IMAGE2)
+kp3, des3 = descriptors.orb(IMAGE3)
 matches1 = detection.match(img1, des1, kp1, img2, des2, kp2)
 matches2 = detection.match(img2, des2, kp2, img3, des3, kp3)
 D1 = makeD.makeD(matches1,kp1,kp2)
@@ -91,6 +91,7 @@ plotStructure = np.vstack((plotStructure2,plotStructure3))
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
+ax._axis3don = False
 xs = []
 ys = []
 zs = []
@@ -99,8 +100,5 @@ for index in xrange(len(plotStructure[:,0])):
 	ys.append(plotStructure[index,1])
 	zs.append(plotStructure[index,2])
 ax.scatter(xs,ys,zs, c='r', marker='o')
-ax.set_xlabel('X Label')
-ax.set_ylabel('Y Label')
-ax.set_zlabel('Z Label')
 plt.show()
 
