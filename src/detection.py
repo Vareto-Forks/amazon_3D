@@ -1,6 +1,8 @@
 import cv2 as cv 
 import numpy as np 
 import ransac
+import matplotlib
+import matplotlib.pyplot as plt
 
 KP_THRESH = 0.7
 
@@ -37,6 +39,7 @@ def match(img1, des1, kp1, img2, des2, kp2):
 	img3 = cv.resize(img3, (0,0), fx=xScale, fy=yScale) 
 	for match in matches:
 		ind1, ind2 = match
+		imgId = str(ind1)+str(ind2)
 		pt1 = kp1[ind1]
 		pt2 = kp2[ind2]
 		pt1 = pt1.pt
@@ -44,9 +47,13 @@ def match(img1, des1, kp1, img2, des2, kp2):
 		pt1 = (int(int(pt1[0])*xScale), int(int(pt1[1])*yScale))
 		pt2 = (int((int(pt2[0]) + width1)*xScale), int(int(pt2[1])*yScale))
 		cv.line(img3, pt1, pt2, 255)
+	imgId = str(ind1)+str(ind2)
 		
 	print "... displaying matches ... "
-	cv.imshow('img', img3)
+	cv.imshow('img' + imgId, img3)
+	plt.imshow(img3, cmap = 'gray', interpolation = 'bicubic')
+	plt.xticks([]), plt.yticks([])
+	plt.show()
 	return matches
 
 def matchKeypoints(des1, des2, thresh):

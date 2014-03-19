@@ -12,9 +12,9 @@ import makeD
 
 PATH_TO_DATA = '../data/'
 
-IMAGE1 = 'vball/leftside.jpg'
-IMAGE2 = 'vball/front.jpg'
-IMAGE3 = 'vball/rightside.jpg'
+IMAGE1 = 'shoe/front.jpg'
+IMAGE2 = 'shoe/angle.jpg'
+IMAGE3 = 'shoe/left.jpg'
 
 img1 = cv.imread(PATH_TO_DATA + IMAGE1)
 img2 = cv.imread(PATH_TO_DATA + IMAGE2)
